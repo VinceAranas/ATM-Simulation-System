@@ -28,41 +28,58 @@ Public Class frmLogin
     End Sub
 
     Private Sub Login()
-        sql = "Select * from tblClient where AccountID='" & txtAccountID.Text & "' and Pin='" & txtAccountPIN.Text & "'"
+        ' Step 1: Check if Account ID exists
+        sql = "SELECT * FROM tblClient WHERE AccountID = @AccountID"
         cmd = New OleDbCommand(sql, cn)
-        dr = cmd.ExecuteReader
-        If dr.Read = True Then
-            AccountID = txtAccountID.Text
-            AccountName = dr("AccountName").ToString()
+        cmd.Parameters.AddWithValue("@AccountID", txtAccountID.Text)
+        dr = cmd.ExecuteReader()
 
-            MsgBox("Log In Success. Welcome, " & AccountName, MsgBoxStyle.Information)
+        If dr.Read() Then
+            ' Account exists — now check PIN
+            dr.Close() ' Always close previous reader before executing another query
 
-            Me.Hide()
-            Dim newMenu As New frmMenu()
-            newMenu.Show()
-            Call ClearText()
-        Else
-            MsgBox("Log In Failed: Incorrect Account Name or PIN", MsgBoxStyle.Critical)
+            sql = "SELECT * FROM tblClient WHERE AccountID = @AccountID AND Pin = @Pin"
+            cmd = New OleDbCommand(sql, cn)
+            cmd.Parameters.AddWithValue("@AccountID", txtAccountID.Text)
+            cmd.Parameters.AddWithValue("@Pin", txtAccountPIN.Text)
+            dr = cmd.ExecuteReader()
 
-            lblAttempts.Text = lblAttempts.Text - 1
-            Call UpdateAttempts()
-            If lblAttempts.Text = 0 Then
-                Call UpdateAccountStatus()
+            If dr.Read() Then
+                ' Successful login
+                AccountID = txtAccountID.Text
+                AccountName = dr("AccountName").ToString()
+
+                MsgBox("Log In Success. Welcome, " & AccountName, MsgBoxStyle.Information)
+
+                Me.Hide()
+                Dim newMenu As New frmMenu()
+                newMenu.Show()
+                Call ClearText()
+            Else
+                ' PIN is incorrect — deduct attempt
+                MsgBox("Incorrect PIN. Please try again.", MsgBoxStyle.Critical)
+
+                lblAttempts.Text -= 1
+                If lblAttempts.Text = 0 Then
+                    Call UpdateAccountStatus()
+                End If
             End If
+
+            dr.Close()
+
+        Else
+            ' Account ID does not exist — no attempt deducted
+            MsgBox("Account ID does not exist.", MsgBoxStyle.Exclamation)
         End If
     End Sub
+
 
     Private Sub UpdateAccountStatus()
         sql = "Update tblClient set AccountStatus='Blocked' where AccountID='" & txtAccountID.Text & "'"
         cmd = New OleDbCommand(sql, cn)
         cmd.ExecuteNonQuery()
         MsgBox("You have reached the maximum log in attempts, your account has been disabled", MsgBoxStyle.Critical)
-    End Sub
-
-    Private Sub UpdateAttempts()
-        sql = "Update tblClient set Attempts='" & lblAttempts.Text & "' where AccountID='" & txtAccountID.Text & "'"
-        cmd = New OleDbCommand(sql, cn)
-        cmd.ExecuteNonQuery()
+        lblAttempts.Text = "3"
     End Sub
 
     Private Sub ClearText()

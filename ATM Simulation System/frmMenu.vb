@@ -59,12 +59,18 @@ Public Class frmMenu
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         If MsgBox("Are you sure you want to log out?", vbQuestion + vbYesNo) = vbYes Then
             MsgBox("You have been securely logged out. Thank you for banking with us!", MsgBoxStyle.Information, "Logout Successful")
+
             AccountID = ""
+
             Me.Hide()
+
             frmDeposit.txtDepositAmount.Clear()
             frmWithdraw.txtWithdrawAmount.Clear()
             frmTransfer.txtAccountIDTransfer.Clear()
             frmTransfer.txtTransferAmount.Clear()
+
+            frmLogin.lblAttempts.Text = "3"
+
             frmLogin.Show()
         End If
     End Sub
