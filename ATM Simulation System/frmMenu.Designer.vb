@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmMenu
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmMenu
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMenu))
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -38,8 +38,6 @@ Partial Class frmMenu
         Me.btnTransfer = New System.Windows.Forms.Button()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.btnMiniStatement = New System.Windows.Forms.Button()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.btnChangePIN = New System.Windows.Forms.Button()
         Me.ClientPanel = New System.Windows.Forms.Panel()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
@@ -49,7 +47,6 @@ Partial Class frmMenu
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClientPanel.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -71,8 +68,6 @@ Partial Class frmMenu
         Me.Panel1.Controls.Add(Me.btnTransfer)
         Me.Panel1.Controls.Add(Me.PictureBox7)
         Me.Panel1.Controls.Add(Me.btnMiniStatement)
-        Me.Panel1.Controls.Add(Me.PictureBox8)
-        Me.Panel1.Controls.Add(Me.btnChangePIN)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(250, 600)
@@ -150,7 +145,7 @@ Partial Class frmMenu
         Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox5.Enabled = False
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(0, 529)
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 475)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(250, 55)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -159,7 +154,7 @@ Partial Class frmMenu
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(0, 530)
+        Me.btnExit.Location = New System.Drawing.Point(0, 476)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(250, 55)
         Me.btnExit.TabIndex = 5
@@ -229,27 +224,6 @@ Partial Class frmMenu
         Me.btnMiniStatement.TabIndex = 10
         Me.btnMiniStatement.UseVisualStyleBackColor = True
         '
-        'PictureBox8
-        '
-        Me.PictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox8.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PictureBox8.Enabled = False
-        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(0, 475)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(250, 55)
-        Me.PictureBox8.TabIndex = 13
-        Me.PictureBox8.TabStop = False
-        '
-        'btnChangePIN
-        '
-        Me.btnChangePIN.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnChangePIN.Location = New System.Drawing.Point(0, 476)
-        Me.btnChangePIN.Name = "btnChangePIN"
-        Me.btnChangePIN.Size = New System.Drawing.Size(250, 55)
-        Me.btnChangePIN.TabIndex = 14
-        Me.btnChangePIN.UseVisualStyleBackColor = True
-        '
         'ClientPanel
         '
         Me.ClientPanel.BackColor = System.Drawing.Color.White
@@ -287,7 +261,6 @@ Partial Class frmMenu
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClientPanel.ResumeLayout(False)
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -311,6 +284,4 @@ Partial Class frmMenu
     Friend WithEvents PictureBox7 As PictureBox
     Friend WithEvents btnTransfer As Button
     Friend WithEvents btnMiniStatement As Button
-    Friend WithEvents PictureBox8 As PictureBox
-    Friend WithEvents btnChangePIN As Button
 End Class

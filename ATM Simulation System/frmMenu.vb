@@ -56,11 +56,6 @@ Public Class frmMenu
         childfrom(frmMiniStatement)
     End Sub
 
-    Private Sub btnChangePIN_Click(sender As Object, e As EventArgs) Handles btnChangePIN.Click
-        Dim transferForm As New frmChangePIN()
-        childfrom(frmChangePIN)
-    End Sub
-
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         If MsgBox("Are you sure you want to log out?", vbQuestion + vbYesNo) = vbYes Then
             MsgBox("You have been securely logged out. Thank you for banking with us!", MsgBoxStyle.Information, "Logout Successful")

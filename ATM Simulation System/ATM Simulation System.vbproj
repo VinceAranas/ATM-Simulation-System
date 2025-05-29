@@ -80,12 +80,6 @@
     <Compile Include="frmBalance.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmChangePIN.Designer.vb">
-      <DependentUpon>frmChangePIN.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmChangePIN.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmDeposit.Designer.vb">
       <DependentUpon>frmDeposit.vb</DependentUpon>
     </Compile>
@@ -143,9 +137,6 @@
   <ItemGroup>
     <EmbeddedResource Include="frmBalance.resx">
       <DependentUpon>frmBalance.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmChangePIN.resx">
-      <DependentUpon>frmChangePIN.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeposit.resx">
       <DependentUpon>frmDeposit.vb</DependentUpon>
