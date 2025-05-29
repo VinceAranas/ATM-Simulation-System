@@ -48,12 +48,12 @@ Public Class frmMenu
 
     Private Sub btnTransfer_Click(sender As Object, e As EventArgs) Handles btnTransfer.Click
         Dim transferForm As New frmTransfer()
-        childfrom(frmTransfer)
+        childfrom(transferForm)
     End Sub
 
     Private Sub btnMiniStatement_Click(sender As Object, e As EventArgs) Handles btnMiniStatement.Click
-        Dim transferForm As New frmMiniStatement()
-        childfrom(frmMiniStatement)
+        Dim miniStatementForm As New frmMiniStatement()
+        childfrom(miniStatementForm)
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click

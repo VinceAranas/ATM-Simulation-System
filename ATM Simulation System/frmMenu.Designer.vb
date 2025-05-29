@@ -77,7 +77,7 @@ Partial Class frmMenu
         '
         Me.txtAccountName.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.txtAccountName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountName.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountName.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountName.ForeColor = System.Drawing.Color.MidnightBlue
         Me.txtAccountName.Location = New System.Drawing.Point(133, 169)
         Me.txtAccountName.Name = "txtAccountName"
@@ -89,7 +89,7 @@ Partial Class frmMenu
         '
         Me.txtAccountID.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.txtAccountID.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountID.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountID.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountID.ForeColor = System.Drawing.Color.MidnightBlue
         Me.txtAccountID.Location = New System.Drawing.Point(107, 138)
         Me.txtAccountID.Name = "txtAccountID"
