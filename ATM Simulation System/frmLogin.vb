@@ -3,7 +3,6 @@ Public Class frmLogin
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call Connection()
         Me.CenterToScreen()
-        LoginTime = DateTime.Now
     End Sub
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
@@ -29,15 +28,15 @@ Public Class frmLogin
     End Sub
 
     Private Sub Login()
-        ' Step 1: Check if Account ID exists
+
         sql = "SELECT * FROM tblClient WHERE AccountID = @AccountID"
         cmd = New OleDbCommand(sql, cn)
         cmd.Parameters.AddWithValue("@AccountID", txtAccountID.Text)
         dr = cmd.ExecuteReader()
 
         If dr.Read() Then
-            ' Account exists — now check PIN
-            dr.Close() ' Always close previous reader before executing another query
+
+            dr.Close()
 
             sql = "SELECT * FROM tblClient WHERE AccountID = @AccountID AND Pin = @Pin"
             cmd = New OleDbCommand(sql, cn)
@@ -46,18 +45,18 @@ Public Class frmLogin
             dr = cmd.ExecuteReader()
 
             If dr.Read() Then
-                ' Successful login
                 AccountID = txtAccountID.Text
                 AccountName = dr("AccountName").ToString()
 
                 MsgBox("Log In Success. Welcome, " & AccountName, MsgBoxStyle.Information)
+
+                LoginTime = DateTime.Now
 
                 Me.Hide()
                 Dim newMenu As New frmMenu()
                 newMenu.Show()
                 Call ClearText()
             Else
-                ' PIN is incorrect — deduct attempt
                 MsgBox("Incorrect PIN. Please try again.", MsgBoxStyle.Critical)
 
                 lblAttempts.Text -= 1
