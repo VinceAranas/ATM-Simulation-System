@@ -25,6 +25,9 @@ Public Class frmMenu
         AddHandler inactivityTimer.Tick, AddressOf CheckInactivity
         inactivityTimer.Start()
 
+        ' Hook activity events on all controls including child controls
+        HookActivityEvents(Me)
+
         If String.IsNullOrEmpty(AccountID) Then
             txtAccountID.Text = "No account"
             Exit Sub
@@ -41,6 +44,21 @@ Public Class frmMenu
             txtAccountID.Text = "ID not found"
             txtAccountName.Text = "Name not found"
         End If
+    End Sub
+
+    ' Recursively hook MouseMove and KeyDown events for all controls on the form
+    Private Sub HookActivityEvents(ctrl As Control)
+        AddHandler ctrl.MouseMove, AddressOf ActivityDetected
+        AddHandler ctrl.KeyDown, AddressOf ActivityDetected
+
+        For Each child As Control In ctrl.Controls
+            HookActivityEvents(child)
+        Next
+    End Sub
+
+    ' Called whenever mouse moves or key is pressed on any control
+    Private Sub ActivityDetected(sender As Object, e As EventArgs)
+        ResetInactivity()
     End Sub
 
     Private Sub AutoLogout()
@@ -86,16 +104,6 @@ Public Class frmMenu
             ' 1 minute (warning) + 30 seconds grace = 90 seconds total
             AutoLogout()
         End If
-    End Sub
-
-    Protected Overrides Sub OnMouseMove(e As MouseEventArgs)
-        MyBase.OnMouseMove(e)
-        ResetInactivity()
-    End Sub
-
-    Protected Overrides Sub OnKeyDown(e As KeyEventArgs)
-        MyBase.OnKeyDown(e)
-        ResetInactivity()
     End Sub
 
     Private Sub ResetInactivity()
