@@ -34,9 +34,9 @@ Partial Class frmMiniStatement
         'dgvMiniStatement
         '
         Me.dgvMiniStatement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvMiniStatement.Location = New System.Drawing.Point(106, 210)
+        Me.dgvMiniStatement.Location = New System.Drawing.Point(106, 223)
         Me.dgvMiniStatement.Name = "dgvMiniStatement"
-        Me.dgvMiniStatement.Size = New System.Drawing.Size(445, 188)
+        Me.dgvMiniStatement.Size = New System.Drawing.Size(445, 163)
         Me.dgvMiniStatement.TabIndex = 0
         '
         'btnPrint
