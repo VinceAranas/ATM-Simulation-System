@@ -77,11 +77,11 @@ Partial Class frmMenu
         '
         Me.txtAccountName.BackColor = System.Drawing.Color.FromArgb(CType(CType(72, Byte), Integer), CType(CType(146, Byte), Integer), CType(CType(207, Byte), Integer))
         Me.txtAccountName.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.txtAccountName.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAccountName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountName.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.txtAccountName.Location = New System.Drawing.Point(133, 169)
+        Me.txtAccountName.Location = New System.Drawing.Point(133, 170)
         Me.txtAccountName.Name = "txtAccountName"
-        Me.txtAccountName.Size = New System.Drawing.Size(112, 16)
+        Me.txtAccountName.Size = New System.Drawing.Size(112, 15)
         Me.txtAccountName.TabIndex = 12
         Me.txtAccountName.Text = "Name"
         '

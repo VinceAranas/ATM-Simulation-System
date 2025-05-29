@@ -88,6 +88,17 @@ Public Class frmTransfer
                 cmd = New OleDbCommand(sql, cn)
                 cmd.ExecuteNonQuery()
 
+                ' Record the transaction
+                sql = "INSERT INTO tblTransaction (AccountID, TransactionType, Amount, BalanceAfter, TransactionDate) " &
+                  "VALUES (@AccountID, @TransactionType, @Amount, @BalanceAfter, @TransactionDate)"
+                cmd = New OleDbCommand(sql, cn)
+                cmd.Parameters.Add("@AccountID", OleDbType.VarChar).Value = AccountID
+                cmd.Parameters.Add("@TransactionType", OleDbType.VarChar).Value = "Transfer"
+                cmd.Parameters.Add("@Amount", OleDbType.Currency).Value = transferAmount
+                cmd.Parameters.Add("@BalanceAfter", OleDbType.Currency).Value = newBalance
+                cmd.Parameters.Add("@TransactionDate", OleDbType.Date).Value = Now
+                cmd.ExecuteNonQuery()
+
                 Dim receiptMessage As String = ""
                 receiptMessage &= "======== Transfer Receipt ========" & vbCrLf
                 receiptMessage &= "Status:       Successful Transfer" & vbCrLf
