@@ -60,6 +60,25 @@ Public Class frmMenu
         If MsgBox("Are you sure you want to log out?", vbQuestion + vbYesNo) = vbYes Then
             MsgBox("You have been securely logged out. Thank you for banking with us!", MsgBoxStyle.Information, "Logout Successful")
 
+            LogoutTime = DateTime.Now
+            Dim timeSpent As TimeSpan = LogoutTime - LoginTime
+            Dim minutesSpent As Double = timeSpent.TotalMinutes
+
+            MsgBox("Session Duration: " & timeSpent.Minutes & " minutes and " & timeSpent.Seconds & " seconds.", MsgBoxStyle.Information, "Session Time")
+
+            sql = "INSERT INTO tblSessionLogs (AccountID, LoginTime, LogoutTime, TimeSpentMinutes, DateLogged) " &
+                    "VALUES (@AccountID, @LoginTime, @LogoutTime, @TimeSpentMinutes, @DateLogged)"
+
+            cmd = New OleDbCommand(sql, cn)
+            cmd.Parameters.Add("@AccountID", OleDbType.VarChar).Value = AccountID
+            cmd.Parameters.Add("@LoginTime", OleDbType.Date).Value = LoginTime
+            cmd.Parameters.Add("@LogoutTime", OleDbType.Date).Value = LogoutTime
+            cmd.Parameters.Add("@TimeSpentMinutes", OleDbType.Double).Value = minutesSpent
+            cmd.Parameters.Add("@DateLogged", OleDbType.Date).Value = Now.Date
+
+            cmd.ExecuteNonQuery()
+
+
             AccountID = ""
 
             Me.Hide()
@@ -74,6 +93,5 @@ Public Class frmMenu
             frmLogin.Show()
         End If
     End Sub
-
 
 End Class

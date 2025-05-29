@@ -9,6 +9,8 @@ Module databaseConnection
     Public currentbalance As Double
     Public AccountID As String
     Public AccountName As String
+    Public LoginTime As DateTime
+    Public LogoutTime As DateTime
 
     Public Sub Connection()
         cn.Close()
