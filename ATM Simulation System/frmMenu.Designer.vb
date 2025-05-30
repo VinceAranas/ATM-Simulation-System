@@ -69,8 +69,9 @@ Partial Class frmMenu
         Me.Panel1.Controls.Add(Me.PictureBox7)
         Me.Panel1.Controls.Add(Me.btnMiniStatement)
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(250, 600)
+        Me.Panel1.Size = New System.Drawing.Size(375, 923)
         Me.Panel1.TabIndex = 2
         '
         'txtAccountName
@@ -79,9 +80,10 @@ Partial Class frmMenu
         Me.txtAccountName.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtAccountName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountName.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.txtAccountName.Location = New System.Drawing.Point(133, 170)
+        Me.txtAccountName.Location = New System.Drawing.Point(200, 262)
+        Me.txtAccountName.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtAccountName.Name = "txtAccountName"
-        Me.txtAccountName.Size = New System.Drawing.Size(112, 15)
+        Me.txtAccountName.Size = New System.Drawing.Size(168, 22)
         Me.txtAccountName.TabIndex = 12
         Me.txtAccountName.Text = "Name"
         '
@@ -91,9 +93,10 @@ Partial Class frmMenu
         Me.txtAccountID.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.txtAccountID.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtAccountID.ForeColor = System.Drawing.Color.MidnightBlue
-        Me.txtAccountID.Location = New System.Drawing.Point(107, 138)
+        Me.txtAccountID.Location = New System.Drawing.Point(160, 212)
+        Me.txtAccountID.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.txtAccountID.Name = "txtAccountID"
-        Me.txtAccountID.Size = New System.Drawing.Size(100, 16)
+        Me.txtAccountID.Size = New System.Drawing.Size(150, 24)
         Me.txtAccountID.TabIndex = 9
         Me.txtAccountID.Text = "ID"
         '
@@ -103,18 +106,20 @@ Partial Class frmMenu
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox2.Enabled = False
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(0, 259)
+        Me.PictureBox2.Location = New System.Drawing.Point(0, 398)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(250, 55)
+        Me.PictureBox2.Size = New System.Drawing.Size(374, 84)
         Me.PictureBox2.TabIndex = 6
         Me.PictureBox2.TabStop = False
         '
         'btnDeposit
         '
         Me.btnDeposit.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDeposit.Location = New System.Drawing.Point(0, 259)
+        Me.btnDeposit.Location = New System.Drawing.Point(0, 398)
+        Me.btnDeposit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnDeposit.Name = "btnDeposit"
-        Me.btnDeposit.Size = New System.Drawing.Size(250, 55)
+        Me.btnDeposit.Size = New System.Drawing.Size(375, 85)
         Me.btnDeposit.TabIndex = 2
         Me.btnDeposit.UseVisualStyleBackColor = True
         '
@@ -124,18 +129,20 @@ Partial Class frmMenu
         Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox3.Enabled = False
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(0, 313)
+        Me.PictureBox3.Location = New System.Drawing.Point(0, 482)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(250, 55)
+        Me.PictureBox3.Size = New System.Drawing.Size(374, 84)
         Me.PictureBox3.TabIndex = 7
         Me.PictureBox3.TabStop = False
         '
         'btnWithdraw
         '
         Me.btnWithdraw.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnWithdraw.Location = New System.Drawing.Point(0, 313)
+        Me.btnWithdraw.Location = New System.Drawing.Point(0, 482)
+        Me.btnWithdraw.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnWithdraw.Name = "btnWithdraw"
-        Me.btnWithdraw.Size = New System.Drawing.Size(250, 55)
+        Me.btnWithdraw.Size = New System.Drawing.Size(375, 85)
         Me.btnWithdraw.TabIndex = 3
         Me.btnWithdraw.UseVisualStyleBackColor = True
         '
@@ -145,18 +152,20 @@ Partial Class frmMenu
         Me.PictureBox5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox5.Enabled = False
         Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(0, 475)
+        Me.PictureBox5.Location = New System.Drawing.Point(0, 731)
+        Me.PictureBox5.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(250, 55)
+        Me.PictureBox5.Size = New System.Drawing.Size(374, 84)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox5.TabIndex = 8
         Me.PictureBox5.TabStop = False
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(0, 476)
+        Me.btnExit.Location = New System.Drawing.Point(0, 732)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(250, 55)
+        Me.btnExit.Size = New System.Drawing.Size(375, 85)
         Me.btnExit.TabIndex = 5
         Me.btnExit.UseVisualStyleBackColor = True
         '
@@ -166,9 +175,10 @@ Partial Class frmMenu
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox1.Enabled = False
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 205)
+        Me.PictureBox1.Location = New System.Drawing.Point(0, 315)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(250, 55)
+        Me.PictureBox1.Size = New System.Drawing.Size(374, 84)
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
@@ -176,9 +186,10 @@ Partial Class frmMenu
         '
         Me.btnBalanceInquiry.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnBalanceInquiry.Font = New System.Drawing.Font("Verdana", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBalanceInquiry.Location = New System.Drawing.Point(0, 205)
+        Me.btnBalanceInquiry.Location = New System.Drawing.Point(0, 315)
+        Me.btnBalanceInquiry.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnBalanceInquiry.Name = "btnBalanceInquiry"
-        Me.btnBalanceInquiry.Size = New System.Drawing.Size(250, 55)
+        Me.btnBalanceInquiry.Size = New System.Drawing.Size(375, 85)
         Me.btnBalanceInquiry.TabIndex = 1
         Me.btnBalanceInquiry.UseVisualStyleBackColor = True
         '
@@ -188,18 +199,20 @@ Partial Class frmMenu
         Me.PictureBox4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox4.Enabled = False
         Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(0, 367)
+        Me.PictureBox4.Location = New System.Drawing.Point(0, 565)
+        Me.PictureBox4.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(250, 55)
+        Me.PictureBox4.Size = New System.Drawing.Size(374, 84)
         Me.PictureBox4.TabIndex = 7
         Me.PictureBox4.TabStop = False
         '
         'btnTransfer
         '
         Me.btnTransfer.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnTransfer.Location = New System.Drawing.Point(0, 367)
+        Me.btnTransfer.Location = New System.Drawing.Point(0, 565)
+        Me.btnTransfer.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnTransfer.Name = "btnTransfer"
-        Me.btnTransfer.Size = New System.Drawing.Size(250, 55)
+        Me.btnTransfer.Size = New System.Drawing.Size(375, 85)
         Me.btnTransfer.TabIndex = 4
         Me.btnTransfer.UseVisualStyleBackColor = True
         '
@@ -209,18 +222,20 @@ Partial Class frmMenu
         Me.PictureBox7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PictureBox7.Enabled = False
         Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(0, 421)
+        Me.PictureBox7.Location = New System.Drawing.Point(0, 648)
+        Me.PictureBox7.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(250, 55)
+        Me.PictureBox7.Size = New System.Drawing.Size(374, 84)
         Me.PictureBox7.TabIndex = 11
         Me.PictureBox7.TabStop = False
         '
         'btnMiniStatement
         '
         Me.btnMiniStatement.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnMiniStatement.Location = New System.Drawing.Point(0, 421)
+        Me.btnMiniStatement.Location = New System.Drawing.Point(0, 648)
+        Me.btnMiniStatement.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnMiniStatement.Name = "btnMiniStatement"
-        Me.btnMiniStatement.Size = New System.Drawing.Size(250, 55)
+        Me.btnMiniStatement.Size = New System.Drawing.Size(375, 85)
         Me.btnMiniStatement.TabIndex = 10
         Me.btnMiniStatement.UseVisualStyleBackColor = True
         '
@@ -228,29 +243,32 @@ Partial Class frmMenu
         '
         Me.ClientPanel.BackColor = System.Drawing.Color.White
         Me.ClientPanel.Controls.Add(Me.PictureBox6)
-        Me.ClientPanel.Location = New System.Drawing.Point(251, 0)
+        Me.ClientPanel.Location = New System.Drawing.Point(376, 0)
+        Me.ClientPanel.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.ClientPanel.Name = "ClientPanel"
-        Me.ClientPanel.Size = New System.Drawing.Size(650, 600)
+        Me.ClientPanel.Size = New System.Drawing.Size(975, 923)
         Me.ClientPanel.TabIndex = 3
         '
         'PictureBox6
         '
         Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(25, 28)
+        Me.PictureBox6.Location = New System.Drawing.Point(38, 43)
+        Me.PictureBox6.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(612, 531)
+        Me.PictureBox6.Size = New System.Drawing.Size(918, 817)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox6.TabIndex = 0
         Me.PictureBox6.TabStop = False
         '
         'frmMenu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(900, 600)
+        Me.ClientSize = New System.Drawing.Size(1350, 923)
         Me.Controls.Add(Me.ClientPanel)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "frmMenu"
         Me.Text = "frmMenu"
         Me.Panel1.ResumeLayout(False)
