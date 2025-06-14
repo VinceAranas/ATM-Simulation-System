@@ -8,9 +8,20 @@ Public Class frmDeposit
         txtDepositAmount.Clear()
     End Sub
 
+    Private Function IsValidDenomination(amount As Integer, bills() As Integer) As Boolean
+        For i As Integer = LBound(bills) To UBound(bills)
+            If amount Mod bills(i) = 0 Then
+                Return True
+            End If
+        Next
+        Return False
+    End Function
+
     Private Sub btnDeposit_Click(sender As Object, e As EventArgs) Handles btnDeposit.Click
         Dim amountText As String = txtDepositAmount.Text.Trim()
         Dim amount As Decimal
+
+        Dim validBills() As Integer = {20, 50, 100, 200, 500, 1000}
 
         If amountText = "" Then
             MsgBox("Please complete the information required before saving", MsgBoxStyle.Exclamation)
@@ -26,6 +37,10 @@ Public Class frmDeposit
 
         ElseIf amount > 50000 Then
             MsgBox("Invalid Amount. Deposit amount limit is ₱50,000.00.", MsgBoxStyle.Exclamation)
+            txtDepositAmount.Clear()
+
+        ElseIf amount <> Math.Floor(amount) OrElse Not IsValidDenomination(CInt(amount), validBills) Then
+            MsgBox("Invalid amount. Please enter a valid bill amount (e.g., ₱20, ₱50, ₱100, ₱200, etc.).", MsgBoxStyle.Exclamation)
             txtDepositAmount.Clear()
 
         Else

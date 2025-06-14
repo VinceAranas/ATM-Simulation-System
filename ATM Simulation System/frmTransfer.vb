@@ -9,10 +9,21 @@ Public Class frmTransfer
         txtTransferAmount.Clear()
     End Sub
 
+    Private Function IsValidDenomination(amount As Integer, bills() As Integer) As Boolean
+        For i As Integer = LBound(bills) To UBound(bills)
+            If amount Mod bills(i) = 0 Then
+                Return True
+            End If
+        Next
+        Return False
+    End Function
+
     Private Sub btnTransfer_Click(sender As Object, e As EventArgs) Handles btnTransfer.Click
         Dim transferText As String = txtTransferAmount.Text.Trim()
         Dim transferAmount As Decimal
         Dim targetAccount As String = txtAccountIDTransfer.Text.Trim()
+
+        Dim validBills() As Integer = {20, 50, 100, 200, 500, 1000}
 
         If transferText = "" AndAlso targetAccount = "" Then
             MsgBox("Please complete the information required before saving", MsgBoxStyle.Exclamation)
@@ -28,6 +39,10 @@ Public Class frmTransfer
 
         ElseIf transferAmount > 50000 Then
             MsgBox("Invalid Amount. Transfer limit is ₱50,000.00.", MsgBoxStyle.Exclamation)
+            Call ClearText()
+
+        ElseIf transferAmount <> Math.Floor(transferAmount) OrElse Not IsValidDenomination(CInt(transferAmount), validBills) Then
+            MsgBox("Invalid amount. Please enter a valid bill amount (e.g., ₱20, ₱50, ₱100, ₱200, etc.).", MsgBoxStyle.Exclamation)
             Call ClearText()
 
         ElseIf AccountID = targetAccount Then
