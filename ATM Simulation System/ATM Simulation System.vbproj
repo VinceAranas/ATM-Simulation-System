@@ -105,6 +105,12 @@
     <Compile Include="frmMiniStatement.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmStatementPreview.Designer.vb">
+      <DependentUpon>frmStatementPreview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmStatementPreview.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmTransfer.Designer.vb">
       <DependentUpon>frmTransfer.vb</DependentUpon>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMiniStatement.resx">
       <DependentUpon>frmMiniStatement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStatementPreview.resx">
+      <DependentUpon>frmStatementPreview.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTransfer.resx">
       <DependentUpon>frmTransfer.vb</DependentUpon>

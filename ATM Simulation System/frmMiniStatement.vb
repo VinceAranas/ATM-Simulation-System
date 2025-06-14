@@ -84,7 +84,26 @@ Public Class frmMiniStatement
             "Confirm Print")
 
             If confirm = MsgBoxResult.Yes Then
-                MsgBox("Mini Statement printed successfully!", MsgBoxStyle.Information, "Print Successful")
+                Dim statement As String = "ABC BANK MINI STATEMENT" & vbCrLf
+                statement &= "Account ID: " & AccountID & vbCrLf
+                statement &= "Date: " & DateTime.Now.ToString("MMMM dd, yyyy hh:mm tt") & vbCrLf
+                statement &= "Balance: " & txtBalance.Text & vbCrLf
+                statement &= New String("="c, 50) & vbCrLf
+
+                For Each row As DataGridViewRow In dgvMiniStatement.Rows
+                    If Not row.IsNewRow Then
+                        statement &= "Date: " & CDate(row.Cells("TransactionDate").Value).ToString("MMM dd, yyyy hh:mm tt") & vbCrLf
+                        statement &= "Type: " & row.Cells("TransactionType").Value.ToString() & vbCrLf
+                        statement &= "Amount: " & FormatCurrency(row.Cells("Amount").Value) & vbCrLf
+                        statement &= "New Balance: " & FormatCurrency(row.Cells("BalanceAfter").Value) & vbCrLf
+                        statement &= "Transaction #: " & row.Cells("TransactionID").Value.ToString() & vbCrLf
+                        statement &= New String("-"c, 50) & vbCrLf
+                    End If
+                Next
+
+                Dim previewForm As New frmStatementPreview()
+                previewForm.ShowStatement(statement)
+                previewForm.ShowDialog()
             Else
                 MsgBox("Printing cancelled.", MsgBoxStyle.Information)
             End If
